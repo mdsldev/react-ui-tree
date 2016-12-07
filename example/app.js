@@ -4,7 +4,6 @@ var ReactDOM = require('react-dom');
 var Tree = require('../lib/react-ui-tree.js');
 var tree = require('./tree');
 
-require('../lib/react-ui-tree.less');
 require('./theme.less');
 require('./app.less');
 

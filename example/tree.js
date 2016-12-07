@@ -2,11 +2,12 @@ module.exports = {
   module: 'react-ui-tree',
   children: [{
     module: `dist (i cant be dragged as a whole)`,
-    collapsed: true,
+    collapsed: false,
     draggable: false,
     children: [{
       module: 'node.js',
-      leaf: true
+      collapsed: false,
+      children: [],
     }, {
       module: 'react-ui-tree.css',
       leaf: true
