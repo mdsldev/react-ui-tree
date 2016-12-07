@@ -1,8 +1,9 @@
 {
   "name": "react-ui-tree",
   "version": "2.5.0",
-  "description": "React tree component",
+  "description": "Forked and extended version of React tree component",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "webpack-dev-server -c --port=8888",
     "build": "make",
@@ -21,12 +22,12 @@
     "react-component",
     "tree"
   ],
-  "author": "Wang Zuo",
+  "author": "MDSLDev (original author: Wang Zuo)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pqx/react-ui-tree/issues"
+    "url": "https://github.com/mdsldev/react-ui-tree/issues"
   },
-  "homepage": "https://github.com/pqx/react-ui-tree",
+  "homepage": "https://github.com/mdsldev/react-ui-tree",
   "peerDependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
@@ -40,6 +41,7 @@
     "github-pages-deploy": "0.0.3",
     "less": "^2.5.0",
     "less-loader": "^2.2.2",
+    "lodash": "^4.17.2",
     "mocha": "^2.3.4",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.10",
