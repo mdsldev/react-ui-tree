@@ -3,6 +3,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Tree = require('../lib/react-ui-tree.js');
 var tree = require('./tree');
+var tree2 = require('./tree2');
 
 require('./theme.less');
 require('./app.less');
@@ -11,7 +12,8 @@ var App = React.createClass({
   getInitialState() {
     return {
       active: null,
-      tree: tree
+      tree: tree,
+      tree2: tree2,
     };
   },
 
@@ -41,6 +43,17 @@ var App = React.createClass({
             onChange={this.handleChange}
             isNodeCollapsed={this.isNodeCollapsed}
             renderNode={this.renderNode}
+            id={'random-tree-01'}
+          />
+        </div>
+        <div className="tree">
+          <Tree
+            paddingLeft={20}
+            tree={this.state.tree2}
+            onChange={this.handleChange2}
+            isNodeCollapsed={this.isNodeCollapsed}
+            renderNode={this.renderNode}
+            id={'random-tree-02'}
           />
         </div>
         <div className="inspector">
@@ -49,6 +62,7 @@ var App = React.createClass({
           {JSON.stringify(this.state.tree, null, '  ')}
           </pre>
          </div>
+        <div style={{ clear: 'both' }}></div>
       </div>
     );
   },
@@ -56,6 +70,12 @@ var App = React.createClass({
   handleChange(tree) {
     this.setState({
       tree: tree
+    });
+  },
+
+  handleChange2(tree) {
+    this.setState({
+      tree2: tree,
     });
   },
 
